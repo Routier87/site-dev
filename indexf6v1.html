@@ -8,52 +8,69 @@
 </head>
 <body>
 
-    <!-- TABLETTE (cachée au démarrage) -->
-    <div id="tablet" style="display: none;">
+<div id="tablet" style="display:none;">
 
+    <div id="tablet-header">
         <h1>Tablette F6</h1>
+        <button onclick="closeTablet()">✖</button>
+    </div>
 
-        <div id="jobs">
-            <h2>📋 Entreprises & Services</h2>
-            <ul>
-                <li>Gendarmerie</li>
-                <li>Police Nationale</li>
-                <li>Police Municipale</li>
-                <li>Pompier</li>
-                <li>SAMU</li>
-                <li>Justice</li>
-                <li>Avocat</li>
-                <li>Mairie Caen</li>
-                <li>Entreprises</li>
-                <li>Café Italien</li>
-                <li>Paradise</li>
-                <li>Brinks</li>
-                <li>Vigneron</li>
-                <li>Unicorn</li>
-                <li>XPO Logistics</li>
-                <li>Bahamas</li>
-                <li>McDonald's</li>
-                <li>Taxi</li>
-                <li>Orpi</li>
-                <li>Norauto</li>
-                <li>Concessionnaire</li>
-                <li>Transdev</li>
-                <li>Bar - Tabacs</li>
-                <li>Pizzéria</li>
-                <li>Burger King</li>
-                <li>KFC</li>
-                <li>DIR de France</li>
-                <li>TF1</li>
-            </ul>
-        </div>
+    <div id="tablet-tabs">
+        <button class="tab-btn active" onclick="openTab('police')">Police</button>
+        <button class="tab-btn" onclick="openTab('pompiers')">Pompiers/SAMU</button>
+        <button class="tab-btn" onclick="openTab('entreprises')">Entreprises</button>
+        <button class="tab-btn" onclick="openTab('admin')">Administration</button>
+    </div>
 
-        <!-- bouton fermer -->
-        <button onclick="closeTablet()">Fermer</button>
+    <div id="tablet-body">
+
+        <!-- Police -->
+        <ul class="tab-content" id="police">
+            <li><img src="icons/gendarmerie.png"> Gendarmerie</li>
+            <li><img src="icons/police.png"> Police Nationale</li>
+            <li><img src="icons/police_municipale.png"> Police Municipale</li>
+        </ul>
+
+        <!-- Pompiers / SAMU -->
+        <ul class="tab-content" id="pompiers">
+            <li><img src="icons/pompier.png"> Pompier</li>
+            <li><img src="icons/samu.png"> SAMU</li>
+        </ul>
+
+        <!-- Entreprises -->
+        <ul class="tab-content" id="entreprises">
+            <li><img src="icons/cafe.png"> Café Italien</li>
+            <li><img src="icons/paradise.png"> Paradise</li>
+            <li><img src="icons/brinks.png"> Brinks</li>
+            <li><img src="icons/vigneron.png"> Vigneron</li>
+            <li><img src="icons/unicorn.png"> Unicorn</li>
+            <li><img src="icons/xpo.png"> XPO Logistics</li>
+            <li><img src="icons/bahamas.png"> Bahamas</li>
+            <li><img src="icons/mcdonalds.png"> McDonald's</li>
+            <li><img src="icons/taxi.png"> Taxi</li>
+            <li><img src="icons/orpi.png"> Orpi</li>
+            <li><img src="icons/norauto.png"> Norauto</li>
+            <li><img src="icons/concessionnaire.png"> Concessionnaire</li>
+            <li><img src="icons/transdev.png"> Transdev</li>
+            <li><img src="icons/bar.png"> Bar - Tabacs</li>
+            <li><img src="icons/pizzeria.png"> Pizzéria</li>
+            <li><img src="icons/burgerking.png"> Burger King</li>
+            <li><img src="icons/kfc.png"> KFC</li>
+        </ul>
+
+        <!-- Administration -->
+        <ul class="tab-content" id="admin">
+            <li><img src="icons/justice.png"> Justice</li>
+            <li><img src="icons/avocat.png"> Avocat</li>
+            <li><img src="icons/mairie.png"> Mairie Caen</li>
+            <li><img src="icons/dir.png"> DIR de France</li>
+            <li><img src="icons/tf1.png"> TF1</li>
+        </ul>
 
     </div>
 
-    <!-- script JS obligatoire -->
-    <script src="script.js"></script>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
